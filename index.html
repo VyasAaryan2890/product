@@ -199,6 +199,7 @@
     background: #fff;
     box-shadow: 0px 8px 32px 0px rgba(0,0,0,0.3);
     padding: 40px 15px;
+    transition: 1s;
 }
 ul li {
     display: inline-block;
@@ -220,17 +221,106 @@ ul li {
     width: 30px;
     height: 30px;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
 }
-    }
-   
+}
+@media(max-width:786px){
+    .hero {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 68vh;
+    background: url(t1.jpg);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero .content {
+    /* border: 1px solid red; */
+    max-width: 518px;
+    box-sizing: border-box;
+    /* border: 1px solid; */
+    position: absolute;
+    margin: 35px 18px;
+}
+}
+@media(max-width:711px){
+    .b1 img {
+    width: 250px;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+}
+@media(max-width:600px)
+{
+    .b1 img {
+    width: 320px;
+    height: 320px;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+}
+@media(max-width:570px){
+    .hero {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 62vh;
+    background: url(t1.jpg);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero .content {
+    /* border: 1px solid red; */
+    max-width: 342px;
+    box-sizing: border-box;
+    /* border: 1px solid; */
+    position: absolute;
+    margin: 35px 18px;
+}
+.content h1 {
+    font-size: 36px;
+    /* border: 1px solid #fff; */
+    padding: 20px 0px;
+    color: #fff;
+    margin: 5px;
+}
+.content p {
+    /* border: 1px solid #fff; */
+    font-size: 26px;
+    color: #fff;
+    margin: 5px;
+}
+.btns {
+    /* border: 1px solid black; */
+    padding: 16px 0px;
+}
+}
+@media(max-width:536px){
+    .hero {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 49vh;
+    background: url(t1.jpg);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+}
 </style>
 </head>
 <body>
     <div class="header">
         
-        <h1><img src="logo.png">Shopper</h1>
-            <ul>
+        <h1><img src="logo.png" alt="">Shopper</h1>
+            <ul id="sidebar">
                 <img src="icon-close.svg" alt="" width="25px" id="close">
                 <li>Home</li>
                 <li>Men</li>
@@ -287,5 +377,19 @@ ul li {
             </div>
         </div>
      </div>
+
+<script>
+    const open = document.getElementById("open");
+    const close = document.getElementById("close");
+    const sidebar = document.getElementById("sidebar");
+
+    open.addEventListener("click",()=>{
+        sidebar.style.right = "0px";
+    })
+
+    close.addEventListener("click",()=>{
+        sidebar.style.right="-300px";
+    })
+</script>
 </body>
 </html>
