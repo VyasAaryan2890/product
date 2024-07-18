@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E - Commerce</title>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    .header h1{
+            color: black;
+            align-items: center;
+            display: flex;
+            padding: 10px;
+    }
+    span{
+        color:rgb(229, 18, 18);
+    }
+    .header{
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: space-around;
+        background-color:#fff;
+        box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.3);
+        align-items: center;
+        box-sizing: border-box;
+        position:sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    ul{
+        list-style: none;
+    }
+    ul li{
+        display: inline-block;
+        margin: 0px 30px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.5s;
+        color:black;
+        
+    }
+    ul li:hover{
+        color:red;
+    }
+    .header img{
+        cursor: pointer;
+    }
+
+    /* Css for hero section */
+
+    .hero{
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 90vh;
+        background: url(t1.jpg);
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        
+    }
+
+    .hero .content{
+        /* border: 1px solid red; */
+        max-width: 540px;
+        box-sizing: border-box;
+        /* border: 1px solid; */
+        position: absolute;
+        margin: 160px 100px;
+    }
+    .content h1{
+        font-size: 60px;
+        /* border: 1px solid #fff; */
+        padding: 20px 0px;
+        color: #fff;
+        margin: 5px;
+    }
+    .content p{
+        /* border: 1px solid #fff; */
+        font-size: 30px;
+        color: #fff;
+        margin: 5px;
+    }
+    .btns{
+        /* border: 1px solid black; */
+        padding: 16px 0px;
+    }
+    .btns button{
+        padding: 15px 30px;
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid black;
+        margin:5px;
+        transition: 1s;
+        border-radius: 50px;
+    }
+    .btns button:hover{
+        border-radius: 10px;
+    }
+    .btns .shop{
+        border: none;
+        color: #fff;
+        background-color:rgb(232, 57, 57);
+    }
+    .btns .find{
+        background-color: #fff;
+        border: none;
+    }
+    /* css for 3 main box */
+    .main{
+        /* border: 2px solid red; */
+        width:90%;
+        margin:50px auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .main .b1{
+        /* border: 1px solid black; */
+        position: relative;
+        background: rgba(52, 67, 203, 0.3);
+        margin: 10px 10px;
+        border-radius: 10px;
+    }
+    .b1 img{
+        width:300px;
+        height: 300px;
+        display: block;
+        object-fit: cover;
+        border-radius: 10px
+    }
+    .con{
+        border: 1px solid #fff;
+        position: absolute;
+       top:50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       margin:100;
+       width: 80%;
+       box-sizing: border-box;
+       padding: 20px 10px;
+       transition: 1s;
+       cursor: pointer;
+       border-radius: 5px;
+    }
+    .b1:hover .con{
+        backdrop-filter: blur(10px);
+    }
+    .con h2{
+        color: #fff;
+        font-size: 20px;
+        padding-bottom: 10px;
+        max-width: 90%;
+    }
+    .con p{
+        color:#fff;
+        padding-bottom: 10px;
+    }
+    .con .bt{
+        padding: 8px 20px;
+        background: transparent;
+        border: 1px solid #fff;
+        cursor: pointer;
+        background-color: transparent;
+        transition: 1s;
+        color: #fff;
+    }
+    .con .bt:hover{
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 10px;
+    }
+    #close{
+        display: none;
+    }
+    #open{
+        display: none;
+
+    }
+    .icon{
+        display: flex;
+    }
+    @media(max-width:800px){
+        ul {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 0px 8px 32px 0px rgba(0,0,0,0.3);
+    padding: 40px 15px;
+}
+ul li {
+    display: inline-block;
+    margin: 0px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    color: black;
+    padding: 15px;
+    font-size: 22p;
+}
+#close{
+    display: block;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+#open{
+    display: block;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    margin-top: 10px;
+}
+    }
+   
+</style>
+</head>
+<body>
+    <div class="header">
+        
+        <h1><img src="logo.png">Shopper</h1>
+            <ul>
+                <img src="icon-close.svg" alt="" width="25px" id="close">
+                <li>Home</li>
+                <li>Men</li>
+                <li>Women</li>
+                <li>About</li>
+            </ul>
+            <div class="icon">
+            <img src="log2.png" alt="" width="70px">
+            <img src="icon-hamburger.svg" alt="" id="open">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+
+    <div class="hero">
+        <div class="content">
+            <h1><span>Raining</span> Offers For Hot Summer !</h1>
+            <p>25% off All Products</p>
+            <div class="btns">
+                <button class="shop">SHOP NOW</button>
+                <button class="find">FIND MORE</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 3 Box Section -->
+     <div class="main">
+        <div class="b1">
+            <img src="img3.jpg" alt="">
+            <div class="con">
+                <h2>20% off On Tank Tops</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Suscipit neque.</p>
+                <button class="bt">SHOP NOW</button>
+            </div>
+        </div>
+        <div class="b1">
+            <img src="img5.jpg" alt="">
+             <div class="con">
+                <h2>Latest Eyewear For You</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Suscipit neque.</p>
+                <button class="bt">SHOP NOW</button>
+            </div>
+        </div>
+        <div class="b1">
+            <img src="img6.jpg" alt="">
+             <div class="con">
+                <h2>Let's Like New Suit Up !</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Suscipit neque.</p>
+                <button class="bt">SHOP NOW</button>
+            </div>
+        </div>
+     </div>
+</body>
+</html>
